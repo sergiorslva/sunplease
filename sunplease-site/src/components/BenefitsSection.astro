@@ -1,0 +1,7 @@
+---
+import { benefits } from '../data/content';
+---
+
+<section id="beneficios" class="section benefits-section" aria-labelledby="benefits-title">
+	<div class="container"><div class="benefits-heading"><h2 id="benefits-title">Por que SunPlease</h2><p>Energia boa se sente em cada escolha.</p></div><div class="benefit-grid">{benefits.map((benefit, index) => <article class="benefit-card"><div class="benefit-card__top"><svg viewBox="0 0 64 64" aria-hidden="true">{index === 0 && <><path d="M12 48V26h10v22M28 48V16h10v32M44 48V8h10v40M8 54h48"/><path d="m12 17 12-8 10 7L52 4"/></>}{index === 1 && <><path d="M32 6 11 18v14c0 13 9 22 21 26 12-4 21-13 21-26V18z"/><path d="M24 32h16M32 24v16"/></>}{index === 2 && <><circle cx="32" cy="32" r="22"/><path d="M32 18v28M20 32h24M22 22c6 4 14 4 20 0M22 42c6-4 14-4 20 0"/></>}</svg></div><h3>{benefit.title}</h3><p>{benefit.text}</p></article>)}</div></div>
+</section>

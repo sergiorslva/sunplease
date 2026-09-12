@@ -1,0 +1,50 @@
+---
+import { company } from '../data/company';
+import '../styles/global.scss';
+
+interface Props {
+	title: string;
+	description?: string;
+	canonical?: string;
+}
+
+const { title, description = company.description, canonical } = Astro.props;
+const pageTitle = `${title} | ${company.name}`;
+const siteUrl = company.canonicalSiteUrl.replace(/\/$/, '');
+const canonicalUrl = canonical ?? (siteUrl ? `${siteUrl}${Astro.url.pathname}` : undefined);
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'LocalBusiness',
+	name: company.name,
+	description: company.description,
+	telephone: company.phone,
+	email: company.email,
+	address: { '@type': 'PostalAddress', streetAddress: company.address },
+	url: company.canonicalSiteUrl || undefined,
+};
+---
+
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="index, follow" />
+		<meta name="description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="pt_BR" />
+		<meta property="og:site_name" content={company.name} />
+		<meta property="og:title" content={pageTitle} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/images/og-image.svg" />
+		{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" sizes="any" />
+		<title>{pageTitle}</title>
+		<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+	</head>
+	<body>
+		<a class="skip-link" href="#conteudo">Pular para o conteudo</a>
+		<slot />
+	</body>
+</html>

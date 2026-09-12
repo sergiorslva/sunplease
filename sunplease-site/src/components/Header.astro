@@ -1,0 +1,33 @@
+---
+import { navigation } from '../data/content';
+import { whatsappUrl } from '../data/company';
+---
+
+<header class="site-header">
+	<div class="container header__inner">
+		<a class="brand" href="#inicio" aria-label="SunPlease - inicio"><img src="/images/sunplease-logo.png" alt="SunPlease" /></a>
+		<button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+			<span class="sr-only">Abrir menu</span><span></span><span></span>
+		</button>
+		<nav id="primary-navigation" class="primary-nav" aria-label="Navegacao principal">
+			<a href="#energia-solar">Nossos servicos</a><a href="#como-funciona">Como funciona</a><a href="#sobre">Sobre nós</a><a href="#beneficios">Blog</a><a href="#contato">Contato</a>
+			<a class="button button--small nav__mobile-cta" href={whatsappUrl()} target="_blank" rel="noreferrer">Simular minha Economia</a>
+		</nav>
+		<a class="button button--small header__cta" href={whatsappUrl()} target="_blank" rel="noreferrer">Simular minha Economia</a>
+	</div>
+</header>
+
+<script>
+	const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+	const nav = document.querySelector<HTMLElement>('.primary-nav');
+	if (toggle && nav) {
+		const close = () => { toggle.setAttribute('aria-expanded', 'false'); nav.classList.remove('is-open'); };
+		toggle.addEventListener('click', () => {
+			const open = toggle.getAttribute('aria-expanded') !== 'true';
+			toggle.setAttribute('aria-expanded', String(open));
+			nav.classList.toggle('is-open', open);
+		});
+		nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', close));
+		document.addEventListener('keydown', (event) => { if (event.key === 'Escape') close(); });
+	}
+</script>
