@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import SolarSection from '../../components/SolarSection.astro';
+import MobilitySection from '../../components/MobilitySection.astro';
+import BenefitsSection from '../../components/BenefitsSection.astro';
+import AboutSection from '../../components/AboutSection.astro';
+import HowItWorks from '../../components/HowItWorks.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+import Footer from '../../components/Footer.astro';
+import { company } from '../../data/company';
+
+const logoSrc = '/images/kingsun-logo-black-horizontal.png';
+---
+
+<BaseLayout title="Energia que move o seu futuro" description={company.description} bodyClass="theme-light" favicon="/images/kingsun-logo-black.png">
+	<Header logoSrc={logoSrc} />
+	<main>
+		<Hero />
+		<SolarSection />
+		<MobilitySection />
+		<BenefitsSection />
+		<AboutSection />
+		<HowItWorks />
+		<ContactCTA />
+	</main>
+	<Footer logoSrc={logoSrc} />
+</BaseLayout>

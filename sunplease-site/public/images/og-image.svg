@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="SunPlease - energia que move o futuro">
-  <rect width="1200" height="630" fill="#f7f3ea"/>
-  <circle cx="940" cy="120" r="280" fill="#ffb840"/>
-  <circle cx="760" cy="345" r="160" fill="#d8f15a"/>
-  <rect x="690" y="350" width="320" height="170" rx="16" fill="#174c38" transform="rotate(-12 690 350)"/>
-  <text x="90" y="260" fill="#123328" font-family="Georgia,serif" font-size="94" font-weight="bold">O sol esta</text>
-  <text x="90" y="365" fill="#174c38" font-family="Georgia,serif" font-size="94" font-style="italic">chamando.</text>
-  <text x="95" y="470" fill="#123328" font-family="Arial,sans-serif" font-size="29" letter-spacing="5">SUNPLEASE</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="KingSun - energia que move o futuro">
+  <rect width="1200" height="630" fill="#252833"/>
+  <circle cx="960" cy="120" r="280" fill="#F4A623"/>
+  <circle cx="780" cy="345" r="160" fill="#102A43"/>
+  <rect x="690" y="350" width="320" height="170" rx="16" fill="#FFFFFF" opacity=".92" transform="rotate(-12 690 350)"/>
+  <text x="90" y="260" fill="#FFFFFF" font-family="Georgia,serif" font-size="94" font-weight="bold">O sol esta</text>
+  <text x="90" y="365" fill="#F4A623" font-family="Georgia,serif" font-size="94" font-style="italic">chamando.</text>
+  <text x="95" y="470" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="29" letter-spacing="5">KINGSUN</text>
 </svg>

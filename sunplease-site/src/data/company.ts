@@ -1,11 +1,11 @@
 export const company = {
-	name: 'SunPlease',
-	description: 'Solucoes inteligentes em energia solar e mobilidade eletrica para um futuro mais leve.',
-	whatsappNumber: '5500000000000',
-	whatsappMessage: 'Ola! Quero simular minha economia com a SunPlease.',
-	phone: '+55 (00) 0000-0000',
-	email: 'ola@sunplease.com.br',
-	address: 'Seu endereco, Sua cidade - UF',
+	name: 'KingSun',
+	description: 'Soluções inteligentes em energia solar e mobilidade elétrica para um futuro mais leve.',
+	whatsappNumber: '5511967966763',
+	whatsappMessage: 'Ola! Quero simular minha economia com a KingSun.',
+	phone: '+55 (11) 96796-6763',
+	email: 'contato@kingsun.com.br',
+	address: 'São Paulo - SP',
 	canonicalSiteUrl: '',
 	socialLinks: { instagram: '#', linkedin: '#' },
 } as const;

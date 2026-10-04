@@ -1,5 +1,28 @@
 ---
-import { steps } from '../data/content';
+import { steps } from "../data/content";
 ---
 
-<section id="como-funciona" class="section process-section" aria-labelledby="process-title"><div class="container"><h2 id="process-title">Como funciona</h2><ol class="steps">{steps.map((step, index) => <li><div><svg viewBox="0 0 64 64" aria-hidden="true">{index === 0 && <><rect x="17" y="11" width="30" height="43" rx="3"/><path d="M26 11v-4h12v4M24 29l5 5 11-12M24 43h16"/></>}{index === 1 && <><path d="m18 44 25-25M14 29l21 21M41 14l9 9M11 50l9-9M27 16l8-8 13 13-8 8"/><circle cx="15" cy="49" r="4"/></>}{index === 2 && <><path d="M12 53h42M17 48V32h9v16M31 48V23h9v25M45 48V13h9v35M17 25l12-10 10 5 14-12"/></>}</svg><h3>{step.title}</h3><p>{step.text}</p></div></li>)}</ol></div></section>
+<section
+	id="como-funciona"
+	class="section process-section"
+	aria-labelledby="process-title"
+>
+	<div class="container">
+		<h2 id="process-title">Como funciona</h2>
+		<ol class="steps">
+			{
+				steps.map((step) => (
+					<li>
+						<div>
+							<div class="steps__icon">
+								<img src={step.icon} alt="" loading="lazy" />
+							</div>
+							<h3>{step.title}</h3>
+							<p>{step.text}</p>
+						</div>
+					</li>
+				))
+			}
+		</ol>
+	</div>
+</section>

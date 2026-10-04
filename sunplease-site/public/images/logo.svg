@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 52" role="img" aria-labelledby="title">
-  <title id="title">SunPlease</title>
-  <text x="0" y="39" fill="#ffb840" font-family="Arial, sans-serif" font-size="44" font-weight="700" letter-spacing="-4">sun</text>
-  <text x="77" y="39" fill="#123328" font-family="Arial, sans-serif" font-size="44" font-weight="700" letter-spacing="-4">please</text>
-  <circle cx="244" cy="34" r="4" fill="#174c38"/>
+  <title id="title">KingSun</title>
+  <text x="0" y="39" fill="#252833" font-family="Arial, sans-serif" font-size="44" font-weight="700" letter-spacing="-2">KING</text>
+  <text x="132" y="39" fill="#F4A623" font-family="Arial, sans-serif" font-size="44" font-weight="700" letter-spacing="-2">SUN</text>
+  <circle cx="260" cy="34" r="4" fill="#102A43"/>
 </svg>

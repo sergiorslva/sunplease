@@ -1,19 +1,24 @@
 ---
 import { navigation } from '../data/content';
-import { whatsappUrl } from '../data/company';
+import { company, whatsappUrl } from '../data/company';
+
+interface Props {
+	logoSrc?: string;
+}
+
+const { logoSrc = '/images/kingsun-logo-white-horizontal.png' } = Astro.props;
 ---
 
 <header class="site-header">
 	<div class="container header__inner">
-		<a class="brand" href="#inicio" aria-label="SunPlease - inicio"><img src="/images/sunplease-logo.png" alt="SunPlease" /></a>
+		<a class="brand" href="#inicio" aria-label={`${company.name} - inicio`}><img src={logoSrc} alt={company.name} /></a>
 		<button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
 			<span class="sr-only">Abrir menu</span><span></span><span></span>
 		</button>
 		<nav id="primary-navigation" class="primary-nav" aria-label="Navegacao principal">
 			<a href="#energia-solar">Nossos servicos</a><a href="#como-funciona">Como funciona</a><a href="#sobre">Sobre nós</a><a href="#beneficios">Blog</a><a href="#contato">Contato</a>
 			<a class="button button--small nav__mobile-cta" href={whatsappUrl()} target="_blank" rel="noreferrer">Simular minha Economia</a>
-		</nav>
-		<a class="button button--small header__cta" href={whatsappUrl()} target="_blank" rel="noreferrer">Simular minha Economia</a>
+		</nav>		
 	</div>
 </header>
 

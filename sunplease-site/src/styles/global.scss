@@ -11,13 +11,200 @@
 @media (max-width: ($bp-desktop - 1px)) { .header__cta { display: none; }.menu-toggle { display: block; }.primary-nav { position: absolute; display: none; left: 0; right: 0; top: 100%; padding: 1.5rem 1rem 2rem; background: $cream; border-bottom: 1px solid $line; flex-direction: column; align-items: flex-start; }.primary-nav.is-open { display: flex; }.nav__mobile-cta { display: inline-flex; margin-top: .5rem; } }
 @media (max-width: 420px) { .section { padding: 4.5rem 0; }.hero__art { min-height: 250px; }.hero__orb { width: 230px; }.hero__panel { width: 170px; height: 105px; }.solar-art span { font-size: 4.6rem; }.footer__bottom { flex-direction: column; }.contact-cta { padding: 4rem 0; } }
 
-/* Visual system aligned to the approved SunPlease reference. */
-.site-header { background: #fff; box-shadow: 0 2px 14px rgba(0,0,0,.07); }.header__inner { min-height: 5.8rem; }.brand img { width: 165px; height: auto; }.primary-nav { gap: 2rem; font: 800 .68rem 'Montserrat', sans-serif; text-transform: uppercase; }.header__cta { background: #3e913d; color: #fff; padding: .8rem 1.25rem; font-size: .7rem; }
-.hero { min-height: 550px; background: #dae8ef; overflow: hidden; }.hero__grid { display: block; min-height: 550px; }.hero__content { position: relative; z-index: 2; width: min(48vw, 580px); padding: 5.3rem 0 3rem; }.hero__kicker { white-space: nowrap; text-transform: uppercase; font: 800 clamp(1.1rem,2vw,1.6rem)/1.3 'Montserrat',sans-serif; }.hero h1 { color: #071941; margin: 1.35rem 0 2rem; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; font-style: normal; }.hero h1 em { color: inherit; }.hero__content .button { background: #3c9139; color: #fff; min-width: 260px; font-size: 1rem; }.hero__content small { display: block; margin: .6rem 0 0 4.5rem; font-weight: 600; }.hero__art { position: absolute; inset: 0 auto 0 50%; width: 100vw; min-height: 0; transform: translateX(-50%); background: linear-gradient(90deg,rgba(238,245,246,.92),rgba(238,245,246,.72) 27%,transparent 52%),url('/images/hero-energy.png') center/cover no-repeat; }
-.split-layout { grid-template-columns: 1fr 1fr; gap: 4rem; }.section-photo { width: 100%; height: 340px; object-fit: cover; border-radius: 16px; order: 2; }.section-copy { order: 1; }.section-copy h2 { display: none; }.section-copy h2.service-title { display:flex; }.service-title { display:flex; align-items:flex-start; gap:1rem; margin: 0 0 1.5rem; color: #071941; font: 700 clamp(2.75rem,4vw,4rem)/.86 'Barlow Condensed',sans-serif; text-transform:none; }.service-title svg { flex:0 0 auto; width:3.4rem; height:3.4rem; margin-top:.1rem; fill:none; stroke:#f6a000; stroke-width:3.5; stroke-linecap:round; stroke-linejoin:round; }.service-title > span { display:block; }.service-title strong { display:block; color: #f6a000; font-size: .72em; }.service-title--green svg { stroke:#3f933c; }.service-title--green strong { color:#3f933c; }.section-copy > p:not(.eyebrow):not(.service-title) { font-size: 1rem; }.text-link { color:#3d8e3a; font-size:.85rem; }.solar-section { padding-bottom: 3rem; }.mobility-section { background:#fafafa; }.split-layout--reverse .section-photo { order:1; }.split-layout--reverse .section-copy { order:2; }
-.benefits-section { padding:4rem 0 4.5rem; background:#fff; }.benefits-heading { display:flex; align-items:baseline; gap:1.4rem; padding-bottom:1.8rem; border-bottom:1px solid #d9dce1; white-space:nowrap; }.benefits-heading h2 { margin:0; color:#071941; font:800 clamp(2.4rem,4.2vw,4.5rem)/.9 'Barlow Condensed',sans-serif; text-transform:uppercase; }.benefits-heading p { color:#4a596d; font-size:clamp(.9rem,1.4vw,1.15rem); font-weight:600; }.benefit-grid { grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:2.2rem; }.benefit-card { min-height:230px; padding:1.2rem 1rem; display:block; border-radius:0; border:0; box-shadow:none; text-align:center; }.benefit-card:hover { transform:none; box-shadow:none; }.benefit-card__top { display:flex; justify-content:center; }.benefit-card svg { width:4.2rem; height:4.2rem; padding:.8rem; border-radius:50%; background:#f2f3f2; fill:none; stroke:#3f933c; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }.benefit-card h3 { margin:1.25rem 0 .7rem; color:#071941; font-size:1.15rem; }.benefit-card p { max-width:290px; margin:auto; color:#4a596d; font-size:.8rem; line-height:1.65; }
-.about-section { padding:0 0 3.5rem; background:#fff; color:#fff; }.about-layout { grid-template-columns:1.1fr 2fr; gap:2rem; padding:3.1rem; border-radius:14px; background:linear-gradient(115deg,#051f4c,#001e43); }.about__mark { display:none; }.about-section h2 { margin:0 0 1rem; font-family:'Barlow Condensed',sans-serif; text-transform:uppercase; }.about-section h2 + p { color:#fff; font-size:.78rem; }.values { display:grid; grid-template-columns:repeat(3,1fr); }.values article { padding:0 1.5rem; border-left:1px solid rgba(255,255,255,.65); text-align:center; }.values span { color:#c6d823; font-size:2rem; }.values img { display:block; width:4.5rem; height:4.5rem; margin:0 auto; object-fit:contain; }.values h3 { margin:.8rem 0; }.values p { font-size:.7rem; }
-.process-section { padding-top:0; }.process-section h2 { text-align:center; margin-bottom:2.2rem; font-family:'Barlow Condensed',sans-serif; text-transform:uppercase; }.steps { grid-template-columns:repeat(3,1fr); gap:2rem; }.steps li { padding:0; border:0; display:flex; justify-content:center; text-align:center; }.steps li > div { max-width:230px; }.steps svg { display:grid; width:86px; height:86px; margin:0 auto 1rem; padding:18px; border-radius:50%; background:#f2f3f2; fill:none; stroke:#3f933c; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }.steps h3 { font-size:.85rem; text-transform:uppercase; }.steps p { font-size:.7rem; }.contact-cta { background:#3e913d; }.contact-cta h2 { color:#fff; font-family:'Barlow Condensed',sans-serif; text-transform:uppercase; }.contact-cta .button { background:#fff; color:#3e913d; }.site-footer { background:#071941; }.site-footer .brand img { filter:brightness(0) invert(1); }
+/* Visual system aligned to the KingSun identity. */
+.site-header { background: #fff; box-shadow: 0 2px 14px rgba(16,42,67,.08); }.header__inner { min-height: 5.8rem; }.brand img { width: 230px; height: auto; }.primary-nav { gap: 2rem; font: 800 .68rem 'Montserrat', sans-serif; text-transform: uppercase; }.header__cta { background: #f4a623; color: #252833; padding: .8rem 1.25rem; font-size: .7rem; }
+.hero { min-height: 550px; background: #f5f7fa; overflow: hidden; }.hero__grid { display: block; min-height: 550px; }.hero__content { position: relative; z-index: 2; width: min(48vw, 580px); padding: 5.3rem 0 3rem; }.hero__kicker { white-space: nowrap; text-transform: uppercase; font: 800 clamp(1.1rem,2vw,1.6rem)/1.3 'Montserrat',sans-serif; }.hero h1 { color: #102a43; margin: 1.35rem 0 2rem; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; font-style: normal; }.hero h1 em { color: inherit; }.hero__content .button { background: #f4a623; color: #252833; min-width: 260px; font-size: 1rem; }.hero__content small { display: block; margin: .6rem 0 0 4.5rem; font-weight: 600; }.hero__art { position: absolute; inset: 0 auto 0 50%; width: 100vw; min-height: 0; transform: translateX(-50%); background: linear-gradient(90deg,rgba(255,255,255,.94),rgba(255,255,255,.76) 27%,transparent 52%),url('/images/hero-energy.png') center/cover no-repeat; }
+.split-layout { grid-template-columns: 1fr 1fr; gap: 4rem; }.section-photo { width: 100%; height: 340px; object-fit: cover; border-radius: 16px; order: 2; }.section-copy { order: 1; }.section-copy h2 { display: none; }.section-copy h2.service-title { display:flex; }.service-title { display:flex; align-items:flex-start; gap:1rem; margin: 0 0 1.5rem; color: #102a43; font: 700 clamp(2.75rem,4vw,4rem)/.86 'Barlow Condensed',sans-serif; text-transform:none; }.service-title svg { flex:0 0 auto; width:3.4rem; height:3.4rem; margin-top:.1rem; fill:none; stroke:#f4a623; stroke-width:3.5; stroke-linecap:round; stroke-linejoin:round; }.service-title > span { display:block; }.service-title strong { display:block; color: #f4a623; font-size: .72em; }.service-title--green svg { stroke:#f4a623; }.service-title--green strong { color:#f4a623; }.section-copy > p:not(.eyebrow):not(.service-title) { font-size: 1rem; }.text-link { color:#102a43; font-size:.85rem; }.solar-section { padding-bottom: 3rem; }.mobility-section { background:#f5f7fa; }.split-layout--reverse .section-photo { order:1; }.split-layout--reverse .section-copy { order:2; }
+.benefits-section { padding:4rem 0 4.5rem; background:#fff; }.benefits-heading { display:flex; align-items:baseline; gap:1.4rem; padding-bottom:1.8rem; border-bottom:1px solid #d9dce1; white-space:nowrap; }.benefits-heading h2 { margin:0; color:#102a43; font:800 clamp(2.4rem,4.2vw,4.5rem)/.9 'Barlow Condensed',sans-serif; text-transform:uppercase; }.benefits-heading p { color:#5c6675; font-size:clamp(.9rem,1.4vw,1.15rem); font-weight:600; }.benefit-grid { grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:2.2rem; }.benefit-card { min-height:230px; padding:1.2rem 1rem; display:block; border-radius:0; border:0; box-shadow:none; text-align:center; }.benefit-card:hover { transform:none; box-shadow:none; }.benefit-card__top { display:flex; justify-content:center; }.benefit-card svg,.benefit-card__top img { width:4.2rem; height:4.2rem; padding:.8rem; border-radius:50%; background:#dce2ea; object-fit:contain; }.benefit-card svg { fill:none; stroke:#f4a623; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }.benefit-card h3 { margin:1.25rem 0 .7rem; color:#102a43; font-size:1.15rem; }.benefit-card p { max-width:290px; margin:auto; color:#5c6675; font-size:.8rem; line-height:1.65; }
+.about-section { padding:0 0 3.5rem; background:#fff; color:#fff; }.about-layout { grid-template-columns:1.1fr 2fr; gap:2rem; padding:3.1rem; border-radius:14px; background:linear-gradient(115deg,#102a43,#252833); }.about__mark { display:none; }.about-section h2 { margin:0 0 1rem; font-family:'Barlow Condensed',sans-serif; text-transform:uppercase; }.about-section h2 + p { color:#fff; font-size:.78rem; }.values { display:grid; grid-template-columns:repeat(3,1fr); }.values article { padding:0 1.5rem; border-left:1px solid rgba(255,255,255,.65); text-align:center; }.values span { color:#f4a623; font-size:2rem; }.values img { display:block; width:4.5rem; height:4.5rem; margin:0 auto; object-fit:contain; }.values h3 { margin:.8rem 0; }.values p { font-size:.7rem; }
+.process-section { padding-top:0; }.process-section h2 { text-align:center; margin-bottom:2.2rem; font-family:'Barlow Condensed',sans-serif; text-transform:uppercase; }.steps { grid-template-columns:repeat(3,1fr); gap:2rem; }.steps li { padding:0; border:0; display:flex; justify-content:center; text-align:center; }.steps li > div { max-width:230px; }.steps svg,.steps__icon { display:grid; place-items:center; width:86px; height:86px; margin:0 auto 1rem; padding:18px; border-radius:50%; background:#dce2ea; }.steps svg { fill:none; stroke:#f4a623; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }.steps__icon img { display:block; width:100%; height:100%; object-fit:contain; }.steps h3 { font-size:.85rem; text-transform:uppercase; }.steps p { font-size:.7rem; }.contact-cta { background:#f4a623; }.contact-cta h2 { color:#252833; font-family:'Barlow Condensed',sans-serif; text-transform:uppercase; }.contact-cta .button { background:#102a43; color:#fff; }.site-footer { background:#102a43; }.site-footer .brand img { filter:none; }
 @media (max-width: $bp-tablet) { .hero__art { background:linear-gradient(90deg,rgba(238,245,246,.93),rgba(238,245,246,.77) 58%,rgba(238,245,246,.28)),url('/images/hero-energy.png') 63% center/cover no-repeat; }.hero__content { width:80%; padding-top:4rem; }.hero__kicker { white-space:normal; }.split-layout { grid-template-columns:1fr; }.section-photo,.section-copy,.split-layout--reverse .section-photo,.split-layout--reverse .section-copy { grid-column:auto; grid-row:auto; order:initial; }.section-photo { height:280px; }.benefit-grid,.steps,.about-layout,.footer__top { grid-template-columns:1fr; }.benefit-card,.steps li { border-right:0; border-bottom:1px solid #d9dce1; }.benefits-heading { display:block; white-space:normal; }.benefits-heading p { margin-top:.7rem; }.benefit-card { min-height:0; }.values { margin-top:1rem; }.about-layout { padding:2rem; }.footer__bottom { flex-direction:column; } }
 
-.service-title > img { flex: 0 0 auto; width: 3.4rem; height: 3.4rem; margin-top: .1rem; object-fit: contain; }
+.service-title > img {
+	flex: 0 0 auto;
+	align-self: center;
+	width: 3.4rem;
+	height: 3.4rem;
+	margin-top: 0;
+	object-fit: contain;
+}
+
+.service-title strong { margin-top: .14em; }
+
+/* KingSun dark refresh */
+:root { color-scheme: dark; }
+body { background: #252833; color: #ffffff; }
+.site-header { background: rgba(37, 40, 51, .92); border-bottom: 1px solid rgba(255,255,255,.12); box-shadow: 0 14px 32px rgba(0,0,0,.32); }
+.brand img { filter: none; }
+.primary-nav { color: #ffffff; }
+.primary-nav a:not(.button):hover { color: #f4a623; }
+.header__cta,
+.hero__content .button { background: #f4a623; color: #252833; box-shadow: 0 12px 28px rgba(244,166,35,.2); }
+.header__cta:hover,
+.hero__content .button:hover { background: #ffbf4d; }
+.menu-toggle span:not(.sr-only) { background: #ffffff; }
+
+.hero { background: #102a43; }
+.hero__sun { opacity: .16; background: #f4a623; filter: blur(1px); }
+.hero__art { background: linear-gradient(90deg,rgba(16,42,67,.98),rgba(16,42,67,.88) 29%,rgba(16,42,67,.38) 60%),url('/images/hero-energy.png') center/cover no-repeat; }
+.hero__kicker,
+.hero h1,
+.hero h1 em { color: #ffffff; }
+.hero__content small { color: rgba(255,255,255,.72); }
+
+.solar-section,
+.benefits-section,
+.about-section { background: #252833; }
+.mobility-section,
+.process-section { background: #102a43; }
+.section-photo { box-shadow: 0 22px 52px rgba(0,0,0,.36); }
+.service-title { color: #ffffff; }
+.service-title strong,
+.service-title--green strong { color: #f4a623; }
+.section-copy > p:not(.eyebrow):not(.service-title),
+.benefits-heading p,
+.benefit-card p,
+.steps p { color: rgba(255,255,255,.72); }
+.text-link { color: #f4a623; }
+
+.benefits-heading { border-bottom-color: rgba(255,255,255,.14); }
+.benefits-heading h2,
+.benefit-card h3,
+.process-section h2,
+.steps h3 { color: #ffffff; }
+.benefit-card {
+	background: #102a43;
+	border: 1px solid rgba(255,255,255,.1);
+	border-radius: 12px;
+	box-shadow: 0 18px 40px rgba(0,0,0,.22);
+}
+.benefit-card svg,
+.benefit-card__top img,
+.steps svg,
+.steps__icon { background: rgba(220,226,234,.18); stroke: #f4a623; }
+
+.about-layout { background: linear-gradient(135deg,#102a43,#252833 64%,#141722); border: 1px solid rgba(244,166,35,.24); box-shadow: 0 24px 60px rgba(0,0,0,.28); }
+.about-section h2 + p,
+.values p { color: rgba(255,255,255,.78); }
+.values article { border-left-color: rgba(255,255,255,.16); }
+.values h3 { color: #fff; }
+.values img { filter: drop-shadow(0 10px 18px rgba(0,0,0,.28)); }
+
+.steps li { border-top-color: rgba(255,255,255,.12); }
+.contact-cta { background: linear-gradient(135deg,#f4a623,#ffbf4d); color: #252833; }
+.contact-cta .eyebrow,
+.contact-cta h2 { color: #252833; }
+.contact-cta .button { background: #102a43; color: #ffffff; }
+.site-footer { background: #102a43; border-top: 1px solid rgba(255,255,255,.12); }
+
+@media (max-width: ($bp-desktop - 1px)) {
+	.primary-nav { background: #252833; border-bottom-color: rgba(255,255,255,.12); box-shadow: 0 18px 32px rgba(0,0,0,.35); }
+}
+
+@media (max-width: $bp-tablet) {
+	.hero__art { background: linear-gradient(90deg,rgba(16,42,67,.98),rgba(16,42,67,.86) 60%,rgba(16,42,67,.36)),url('/images/hero-energy.png') 63% center/cover no-repeat; }
+	.benefit-card,
+	.steps li { border-bottom-color: rgba(255,255,255,.12); }
+}
+
+/* Light variant available at /light/. */
+.theme-light {
+	color-scheme: light;
+	background: #ffffff;
+	color: #252833;
+}
+
+.theme-light .site-header {
+	background: rgba(255,255,255,.94);
+	border-bottom: 1px solid rgba(37,40,51,.1);
+	box-shadow: 0 10px 28px rgba(16,42,67,.08);
+}
+
+.theme-light .primary-nav { color: #252833; }
+.theme-light .primary-nav a:not(.button):hover { color: #f4a623; }
+.theme-light .menu-toggle span:not(.sr-only) { background: #252833; }
+
+.theme-light .hero { background: #ffffff; }
+.theme-light .hero__sun { background: #f4a623; opacity: .12; }
+.theme-light .hero__art {
+	background: linear-gradient(90deg,rgba(255,255,255,.98),rgba(255,255,255,.84) 32%,rgba(255,255,255,.22) 64%),url('/images/hero-energy.png') center/cover no-repeat;
+}
+.theme-light .hero__kicker,
+.theme-light .hero h1,
+.theme-light .hero h1 em { color: #102a43; }
+.theme-light .hero__content small { color: #5c6675; }
+
+.theme-light .solar-section,
+.theme-light .benefits-section,
+.theme-light .about-section { background: #ffffff; }
+.theme-light .mobility-section,
+.theme-light .process-section { background: #f5f7fa; }
+.theme-light .service-title,
+.theme-light .benefits-heading h2,
+.theme-light .benefit-card h3,
+.theme-light .process-section h2,
+.theme-light .steps h3 { color: #102a43; }
+.theme-light .service-title strong,
+.theme-light .service-title--green strong,
+.theme-light .text-link { color: #f4a623; }
+.theme-light .section-copy > p:not(.eyebrow):not(.service-title),
+.theme-light .benefits-heading p,
+.theme-light .benefit-card p,
+.theme-light .steps p { color: #5c6675; }
+
+.theme-light .benefits-heading { border-bottom-color: rgba(37,40,51,.14); }
+.theme-light .benefit-card {
+	background: #ffffff;
+	border: 1px solid rgba(37,40,51,.12);
+	box-shadow: 0 18px 40px rgba(16,42,67,.08);
+}
+.theme-light .benefit-card svg,
+.theme-light .benefit-card__top img,
+.theme-light .steps__icon,
+.theme-light .steps svg {
+	background: #dce2ea;
+	stroke: #f4a623;
+}
+
+.theme-light .about-layout {
+	background: linear-gradient(135deg,#102a43,#252833);
+	border: 1px solid rgba(16,42,67,.12);
+	box-shadow: 0 24px 60px rgba(16,42,67,.14);
+}
+.theme-light .about-section h2,
+.theme-light .about-section h2 + p,
+.theme-light .values h3 { color: #ffffff; }
+.theme-light .values p { color: rgba(255,255,255,.78); }
+.theme-light .values article { border-left-color: rgba(255,255,255,.16); }
+
+.theme-light .steps li { border-top-color: rgba(37,40,51,.12); }
+.theme-light .contact-cta { background: #f4a623; color: #252833; }
+.theme-light .contact-cta .eyebrow,
+.theme-light .contact-cta h2 { color: #252833; }
+.theme-light .contact-cta .button { background: #102a43; color: #ffffff; }
+.theme-light .site-footer {
+	background: #ffffff;
+	color: #252833;
+	border-top: 1px solid rgba(37,40,51,.12);
+}
+.theme-light .footer__top p,
+.theme-light .footer__bottom { color: rgba(37,40,51,.72); }
+.theme-light .footer__bottom { border-top-color: rgba(37,40,51,.12); }
+.theme-light .footer__links a:hover,
+.theme-light .footer__bottom a:hover { color: #f4a623; }
+
+@media (max-width: ($bp-desktop - 1px)) {
+	.theme-light .primary-nav {
+		background: #ffffff;
+		border-bottom-color: rgba(37,40,51,.12);
+		box-shadow: 0 18px 32px rgba(16,42,67,.14);
+	}
+}
+
+@media (max-width: $bp-tablet) {
+	.theme-light .hero__art {
+		background: linear-gradient(90deg,rgba(255,255,255,.98),rgba(255,255,255,.86) 62%,rgba(255,255,255,.36)),url('/images/hero-energy.png') 63% center/cover no-repeat;
+	}
+	.theme-light .benefit-card,
+	.theme-light .steps li { border-bottom-color: rgba(37,40,51,.12); }
+}
