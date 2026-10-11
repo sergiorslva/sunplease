@@ -208,3 +208,284 @@ body { background: #252833; color: #ffffff; }
 	.theme-light .benefit-card,
 	.theme-light .steps li { border-bottom-color: rgba(37,40,51,.12); }
 }
+
+/* KingSun layout refresh - phase 2: Header + Hero */
+:root { color-scheme: light; }
+body { background: $white; color: $ink; }
+
+.site-header {
+	position: fixed;
+	inset: 0 0 auto;
+	z-index: 50;
+	background: transparent;
+	border-bottom: 0;
+	box-shadow: none;
+	backdrop-filter: none;
+}
+
+.header__inner {
+	width: min(1380px, calc(100% - 5.6rem));
+	min-height: 4.65rem;
+	align-items: center;
+}
+
+.brand img {
+	display: block;
+	width: clamp(190px, 17.2vw, 280px);
+}
+
+.primary-nav {
+	color: $white;
+	gap: clamp(1rem, 1.4vw, 1.65rem);
+	margin-left: auto;
+	font: 800 clamp(.74rem, .78vw, .88rem)/1 'Montserrat', sans-serif;
+	letter-spacing: 0;
+	text-transform: uppercase;
+}
+
+.primary-nav a:not(.button) {
+	position: relative;
+	padding: .58rem 0 .8rem;
+	color: rgba($white, .9);
+}
+
+.primary-nav a:not(.button)::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: .32rem;
+	width: 100%;
+	height: 3px;
+	background: $sun;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform $ease;
+}
+
+.primary-nav a:not(.button):hover,
+.primary-nav a:not(.button):focus-visible { color: $white; }
+
+.primary-nav a.is-active::after,
+.primary-nav a:not(.button):hover::after,
+.primary-nav a:not(.button):focus-visible::after { transform: scaleX(1); }
+
+.header__cta {
+	display: inline-flex;
+	gap: .45rem;
+	min-height: 2.35rem;
+	padding: .68rem .98rem;
+	background: $sun;
+	color: $navy-deep;
+	border-radius: 999px;
+	box-shadow: 0 10px 24px rgba($sun, .28);
+	font-size: clamp(.74rem, .78vw, .88rem);
+	line-height: 1;
+	white-space: nowrap;
+}
+
+.header__cta svg {
+	width: 1.08rem;
+	height: 1.08rem;
+	fill: #24d366;
+	filter: drop-shadow(0 1px 0 rgba($navy-deep, .18));
+}
+
+.header__cta:hover {
+	background: #ffad2d;
+	transform: translateY(-1px);
+}
+
+.hero {
+	background-color: transparent;
+	background-image: url('/images/kingsun-layout/hero-residencia-carregador.jpg');
+	background-position: center top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: $white;
+	isolation: isolate;
+}
+
+.hero::after {
+	content: none;
+	position: absolute;
+	inset: auto 0 0;
+	height: 32%;
+	background: linear-gradient(0deg, rgba($navy-deep, .12), rgba($navy-deep, 0));
+	pointer-events: none;
+}
+
+.hero__grid {
+	display: flex;
+	align-items: center;
+}
+
+.hero__content {
+	position: relative;
+	z-index: 2;
+	width: min(650px, 100%);
+	max-width: none;
+	padding: 0;
+}
+
+.hero h1 {
+	display: grid;
+	gap: .01em;
+	margin: 0 0 .05rem;
+	color: $white;	
+	line-height: .82;
+	--letter-spacing: 0.02em;
+	text-transform: uppercase;
+	font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+	font-weight: 900;
+	letter-spacing: 0.02em;
+}
+
+.hero h1 span {
+	display: block;
+	font-weight: 700;
+}
+
+.hero h1 span:first-child {
+	font-family: 'Montserrat', sans-serif;
+	font-size: .38em;
+	font-weight: 400;
+	letter-spacing: .14em;
+	line-height: 1.25;
+	color: $white;
+}
+
+.hero h1 span:last-child { color: $sun; }
+
+.hero h1 span:nth-child(2),
+.hero h1 span:nth-child(3) {
+	font-weight: 700;
+}
+
+.hero__lead {
+	max-width: 560px;
+	margin: 0 0 1.45rem;
+	color: $white;
+	font-size: clamp(1.2rem, 2vw, 1.7rem);
+	font-weight: 600;
+	line-height: 1.18;
+}
+
+.hero__highlights {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: .85rem;
+	width: min(100%, 560px);
+	margin: 0 0 1.85rem;
+	padding: 0;
+	list-style: none;
+}
+
+.hero__highlights li {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: .38rem;
+	min-width: 5.8rem;
+	min-height: 4.8rem;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	color: $white;
+	font-size: clamp(.68rem, .8vw, .82rem);
+	font-weight: 700;
+	text-align: center;
+	backdrop-filter: none;
+}
+
+.hero__highlight-icon {
+	display: grid;
+	place-items: center;
+	width: 2.75rem;
+	height: 2.75rem;
+	color: $sun;
+}
+
+.hero__highlight-icon svg {
+	width: 100%;
+	height: 100%;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.hero__content .button {
+	min-width: 0;
+	background: $sun;
+	color: $navy-deep;
+	box-shadow: 0 16px 34px rgba($sun, .25);
+}
+
+.hero__content small {
+	display: block;
+	margin: .75rem 0 0;
+	color: rgba($white, .7);
+	font-size: .78rem;
+	font-weight: 600;
+}
+
+@media (max-width: ($bp-desktop - 1px)) {
+	.site-header {
+		background: transparent;
+		backdrop-filter: none;
+	}
+
+	.header__inner { width: min($container, calc(100% - 2rem)); }
+	.menu-toggle { display: block; color: $white; }
+	.menu-toggle span:not(.sr-only) { background: $white; }
+
+	.primary-nav {
+		display: none;
+		position: absolute;
+		left: 1rem;
+		right: 1rem;
+		top: calc(100% + .65rem);
+		padding: 1rem;
+		border: 1px solid rgba($white, .12);
+		border-radius: $radius-sm;
+		background: rgba($navy-deep, .96);
+		box-shadow: 0 18px 40px rgba($navy-deep, .38);
+	}
+
+	.primary-nav.is-open { display: grid; }
+	.header__cta { display: none; }
+	.nav__mobile-cta { display: inline-flex; margin-top: .35rem; }
+}
+
+@media (max-width: $bp-tablet) {
+	.hero {
+		min-height: 620px;
+		background-position: 64% top;
+		background-size: cover;
+	}
+
+	.hero__grid {
+		min-height: 620px;
+		align-items: flex-start;
+		padding-top: 6.8rem;
+	}
+
+	.hero h1 { font-size: clamp(3rem, 16vw, 4.55rem); }
+	.hero__highlights {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		align-items: start;
+		gap: .75rem;
+		width: min(100%, 560px);
+	}
+
+	.hero__highlights li {
+		min-width: 0;
+		font-size: .66rem;
+	}
+}

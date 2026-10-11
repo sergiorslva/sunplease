@@ -1,15 +1,58 @@
 ---
-import { whatsappUrl } from '../data/company';
+const highlights = [
+	{
+		label: 'Energia Solar',
+		icon: 'sun',
+	},
+	{
+		label: 'Eletromobilidade',
+		icon: 'car',
+	},
+	{
+		label: 'Um futuro melhor',
+		icon: 'leaf',
+	},
+] as const;
 ---
 
 <section id="inicio" class="hero" aria-labelledby="hero-title">
-	<div class="hero__sun" aria-hidden="true"></div>
 	<div class="container hero__grid" id="conteudo">
 		<div class="hero__content">
-			<p class="hero__kicker">Da placa no telhado <br> ao carregador do seu carro</p>
-			<h1 id="hero-title">O sol para todos!</h1>
-			<a class="button" href={whatsappUrl()} target="_blank" rel="noreferrer">Simular minha Ecônomia</a>
+			<h1 id="hero-title">
+				<span>Deixe o sol</span>
+				<span>trabalhar</span>
+				<span>pelo seu bolso</span>
+			</h1>
+			<p class="hero__lead">Economize ate 95% na sua conta de luz.</p>
+			<ul class="hero__highlights" aria-label="Destaques KingSun">
+				{highlights.map((item) => (
+					<li>
+						<span class="hero__highlight-icon" aria-hidden="true">
+							{item.icon === 'sun' && (
+								<svg viewBox="0 0 24 24" focusable="false">
+									<circle cx="12" cy="12" r="4"></circle>
+									<path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path>
+								</svg>
+							)}
+							{item.icon === 'car' && (
+								<svg viewBox="0 0 24 24" focusable="false">
+									<path d="M5 11l1.7-4.1A2 2 0 0 1 8.55 5h6.9a2 2 0 0 1 1.85 1.24L19 11"></path>
+									<path d="M4 11h16v6H4z"></path>
+									<path d="M7 17v2M17 17v2M7 14h.01M17 14h.01"></path>
+								</svg>
+							)}
+							{item.icon === 'leaf' && (
+								<svg viewBox="0 0 24 24" focusable="false">
+									<path d="M20 4C12 4 6 8.8 6 16a4 4 0 0 0 4 4c7.2 0 10-8 10-16Z"></path>
+									<path d="M4 20c3.6-5.4 7.5-8.6 12-10"></path>
+								</svg>
+							)}
+						</span>
+						{item.label}
+					</li>
+				))}
+			</ul>
+			<a class="button" href="#simulador">Simular minha economia</a>
 		</div>
-		<div class="hero__art" role="img" aria-label="Carro eletrico em recarga ao lado de uma casa com energia solar"></div>
 	</div>
 </section>
