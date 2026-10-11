@@ -23,7 +23,7 @@ export const steps = [
 ] as const;
 
 export const layoutImages = {
-	hero: '/images/kingsun-layout/hero-residencia-carregador.jpg',
+	hero: '/images/kingsun-layout/hero-residencia-carregador.png',
 	solutions: '/images/kingsun-layout/solucoes-paineis-residenciais.jpg',
 	advantages: '/images/kingsun-layout/familia-energia-solar.jpg',
 	future: '/images/kingsun-layout/futuro-sustentavel.jpg',

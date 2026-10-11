@@ -1,0 +1,19 @@
+---
+const seals = [
+	'Residencias mais eficientes',
+	'Familias mais tranquilas',
+	'Um Brasil mais sustentavel',
+] as const;
+---
+
+<section class="future-banner" aria-labelledby="future-title">
+	<div class="container future-banner__inner">
+		<div>
+			<h2 id="future-title">Mais que energia. Tranquilidade para o seu futuro.</h2>
+			<p>Solucoes completas em energia solar residencial, com tecnologia de ponta e um time especialista ao seu lado em todas as etapas.</p>
+		</div>
+		<ul class="future-banner__seals" aria-label="Beneficios para o futuro">
+			{seals.map((seal) => <li>{seal}</li>)}
+		</ul>
+	</div>
+</section>

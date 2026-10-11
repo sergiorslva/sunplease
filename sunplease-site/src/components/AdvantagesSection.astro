@@ -1,0 +1,29 @@
+---
+const advantages = [
+	'Economize de verdade na sua conta de luz',
+	'Qualidade, preco justo e seguranca',
+	'Valorize sua casa e seu patrimonio',
+	'Carregador na sua garagem para seu carro eletrico',
+	'Equipamentos homologados e de alta durabilidade',
+	'Protecao do planeta para as proximas geracoes',
+	'Suporte vitalicio no pos-venda',
+] as const;
+---
+
+<section id="vantagens" class="section advantages-section" aria-labelledby="advantages-title">
+	<div class="container advantages__inner">
+		<div class="advantages__copy">
+			<h2 id="advantages-title">Vantagens da energia solar <strong>KingSun</strong></h2>
+			<p>Mais economia, autonomia e tranquilidade para voce e sua familia.</p>
+			<ul class="advantages__list">
+				{advantages.map((item) => (
+					<li><span aria-hidden="true">✓</span>{item}</li>
+				))}
+			</ul>
+		</div>
+		<figure class="advantages__photo">
+			<img src="/images/kingsun-layout/familia-energia-solar.jpg" alt="Familia sorrindo em frente a residencia com energia solar" loading="lazy" />
+			<figcaption>Investir em energia solar e investir no que realmente importa.</figcaption>
+		</figure>
+	</div>
+</section>

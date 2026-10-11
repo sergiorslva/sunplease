@@ -1,17 +1,59 @@
 ---
-import { whatsappUrl } from '../data/company';
+const solutionCards = [
+	{
+		title: 'Geracao Inteligente',
+		text: 'Produza sua propria energia e reduza sua dependencia da rede.',
+		icon: 'sun',
+	},
+	{
+		title: 'Muito alem do aquecimento',
+		text: 'Energia para toda sua casa: iluminacao, eletrodomesticos, ar-condicionado e muito mais.',
+		icon: 'home',
+	},
+	{
+		title: 'Conforto sem culpa',
+		text: 'Mais bem-estar para sua familia, com menor impacto no meio ambiente.',
+		icon: 'leaf',
+	},
+	{
+		title: 'Tecnologia e suporte de ponta',
+		text: 'Trabalhamos com marcas de qualidade e acompanhamento de suporte pos-venda.',
+		icon: 'gear',
+	},
+] as const;
 ---
 
-<section id="energia-solar" class="section solar-section" aria-labelledby="solar-title">
-	<div class="container split-layout">
-		<img class="section-photo" src="/images/solar-home.png" alt="Casa residencial com paineis solares no telhado" loading="lazy" />
-		<div class="section-copy">
-			<h2 id="solar-title" class="service-title">
-				<img src="/images/energia-solar.png" alt="" />
-				<span>Energia Solar<strong>Residencial e Comercial</strong></span></h2>
-			<p>Economize de verdade. Cuidamos de absolutamente tudo: estudo de viabilidade, engenharia, burocracia com a distribuidora e instalação segura das placas. 
-				Você só acompanha a sua conta de luz despencar.</p>
-			<a class="text-link" href={whatsappUrl()} target="_blank" rel="noreferrer">Simular minha Economia</a>
+<section id="solucoes" class="section solutions-section" aria-labelledby="solutions-title">
+	<div class="container solutions__inner">
+		<div class="solutions__copy">
+			<h2 id="solutions-title">Energia hoje.<strong>Um amanhã melhor.</strong></h2>
+			<p>Sua casa inteligente e autossuficiente. Energia limpa, economia real e mais liberdade para o seu dia a dia.</p>
+		</div>
+		<div class="solutions__aside">
+			<p>Solucoes reais para uma vida mais independente.</p>
+			<span aria-hidden="true"></span>
+		</div>
+		<div class="solutions__cards">
+			{solutionCards.map((card) => (
+				<article class="solution-card">
+					<div class="solution-card__icon" aria-hidden="true">
+						{card.icon === 'sun' && (
+							<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+						)}
+						{card.icon === 'home' && (
+							<svg viewBox="0 0 24 24"><path d="m3 11 9-8 9 8"></path><path d="M5 10v10h14V10"></path><path d="M9 20v-6h6v6"></path></svg>
+						)}
+						{card.icon === 'leaf' && (
+							<svg viewBox="0 0 24 24"><path d="M20 4C12 4 6 8.8 6 16a4 4 0 0 0 4 4c7.2 0 10-8 10-16Z"></path><path d="M4 20c3.6-5.4 7.5-8.6 12-10"></path></svg>
+						)}
+						{card.icon === 'gear' && (
+							<svg viewBox="0 0 24 24"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"></path><path d="M4.93 10.5 3.5 8l2-3.46 2.87 1.08c.45-.28.94-.5 1.46-.64L10.3 2h4l.47 2.98c.52.14 1.01.36 1.46.64l2.87-1.08 2 3.46-1.43 2.5c.04.25.06.5.06.77s-.02.52-.06.77l1.43 2.5-2 3.46-2.87-1.08c-.45.28-.94.5-1.46.64L14.3 22h-4l-.47-2.98a7.5 7.5 0 0 1-1.46-.64L5.5 19.46l-2-3.46 1.43-2.5a5.5 5.5 0 0 1 0-1.54Z"></path></svg>
+						)}
+					</div>
+					<h3>{card.title}</h3>
+					<p>{card.text}</p>
+				</article>
+			))}
 		</div>
 	</div>
 </section>
