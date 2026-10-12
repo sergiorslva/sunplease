@@ -25,7 +25,7 @@ export const steps = [
 export const layoutImages = {
 	hero: '/images/kingsun-layout/hero-residencia-carregador.png',
 	solutions: '/images/kingsun-layout/solucoes-paineis-residenciais.png',
-	advantages: '/images/kingsun-layout/familia-energia-solar.jpg',
+	advantages: '/images/kingsun-layout/familia-energia-solar.png',
 	future: '/images/kingsun-layout/futuro-sustentavel.jpg',
 	about: '/images/kingsun-layout/quem-somos-paineis.jpg',
 } as const;
