@@ -1738,3 +1738,77 @@ body { background: $white; color: $ink; }
 		gap: .7rem;
 	}
 }
+
+/* Temporary construction page. Full site remains available at /site. */
+.coming-soon-page {
+	background: $navy-deep;
+	color: $white;
+}
+
+.coming-soon {
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+	padding: clamp(2rem, 5vw, 4rem);
+	background:
+		linear-gradient(90deg, rgba($navy-deep, .97) 0%, rgba($navy-deep, .86) 48%, rgba($navy-deep, .44) 100%),
+		url('/images/kingsun-layout/hero-residencia-carregador.png') center / cover no-repeat;
+}
+
+.coming-soon__panel {
+	width: min(100%, 680px);
+	margin-right: auto;
+}
+
+.coming-soon__panel img {
+	width: clamp(190px, 24vw, 310px);
+	height: auto;
+	margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.coming-soon__eyebrow {
+	margin: 0 0 .85rem;
+	color: $sun;
+	font: 800 .82rem/1 'Montserrat', sans-serif;
+	letter-spacing: .12em;
+	text-transform: uppercase;
+}
+
+.coming-soon h1 {
+	max-width: 640px;
+	margin: 0 0 1rem;
+	color: $white;
+	font: 600 clamp(2.4rem, 1.5vw, 5.2rem)/.92 'Montserrat', sans-serif;
+	letter-spacing: 0;
+}
+
+.coming-soon h1 + p {
+	max-width: 520px;
+	margin: 0;
+	color: rgba($white, .82);
+	font-size: clamp(1rem, 1.45vw, 1.25rem);
+	line-height: 1.45;
+}
+
+.coming-soon__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+.coming-soon__actions .button {
+	min-height: 3rem;
+	padding: 0 1.55rem;
+	background: $sun;
+	color: $white;
+}
+
+.coming-soon__preview {
+	color: $white;
+	font-size: .9rem;
+	font-weight: 800;
+	text-decoration: underline;
+	text-underline-offset: .25rem;
+}

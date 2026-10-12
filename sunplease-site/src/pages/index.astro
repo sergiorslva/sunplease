@@ -1,38 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import SolarSection from '../components/SolarSection.astro';
-import AdvantagesSection from '../components/AdvantagesSection.astro';
-import FutureBanner from '../components/FutureBanner.astro';
-import BenefitsSection from '../components/BenefitsSection.astro';
-import AboutSection from '../components/AboutSection.astro';
-import HowItWorks from '../components/HowItWorks.astro';
-import ContactCTA from '../components/ContactCTA.astro';
-import Footer from '../components/Footer.astro';
-import { company } from '../data/company';
+import { company, whatsappUrl } from '../data/company';
 ---
 
-<BaseLayout title="Energia que move o seu futuro" description={company.description}>
-	<Header />
-	<main>
-		<Hero />
-		<SolarSection />
-		<div class="section-bridge-cta">
-			<a class="button section-bridge-cta__button" href="#simulador">
-				Simular minha economia
-				<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-					<path d="M12 5v14"></path>
-					<path d="m6 13 6 6 6-6"></path>
-				</svg>
-			</a>
+<BaseLayout
+	title="Site em construção"
+	description="Estamos preparando uma nova experiência da KingSun."
+	bodyClass="coming-soon-page"
+>
+	<main id="conteudo" class="coming-soon">
+		<div class="coming-soon__panel">
+			<img src="/images/kingsun-logo-white-horizontal.png" alt={company.name} />
+			<p class="coming-soon__eyebrow">Em breve</p>
+			<h1>Estamos preparando uma nova experiência para você.</h1>
+			<p>Enquanto finalizamos os últimos detalhes, fale com a KingSun pelo WhatsApp para simular sua economia com energia solar.</p>
+			<div class="coming-soon__actions">
+				<a class="button" href={whatsappUrl()} target="_blank" rel="noreferrer">Falar pelo WhatsApp</a>				
+			</div>
 		</div>
-		<AdvantagesSection />
-		<FutureBanner />
-		<BenefitsSection />
-		<HowItWorks />
-		<AboutSection />
-		<ContactCTA />
 	</main>
-	<Footer />
 </BaseLayout>
