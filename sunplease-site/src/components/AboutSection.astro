@@ -1,25 +1,47 @@
+---
+const pillars = [
+	{
+		title: 'Nossa História',
+		text: 'Nascemos com o propósito de tornar a energia solar acessivel para mais brasileiros, combinando tecnologia, excelência e atendimento próximo.',
+		icon: '/images/kingsun-layout/about-history.png',
+	},
+	{
+		title: 'Nosso Propósito',
+		text: 'Acelerar a transição para um futuro mais limpo e prospero, ajudando familias a economizar e viver melhor com a energia do sol.',
+		icon: '/images/kingsun-layout/about-propose.png',
+	},
+	{
+		title: 'Nosso Compromisso',
+		text: 'Qualidade, transparência e relacionamento de longo prazo com nossos clientes, do primeiro contato ao pos-venda.',
+		icon: '/images/kingsun-layout/about-compromise.png',
+	},
+	{
+		title: 'Como Atuamos',
+		text: 'Com um time de especialistas, parceiros de confiança e as melhores soluções do mercado para projetos residenciais em todo o Brasil.',
+		icon: '/images/kingsun-layout/about-wework.png',
+	},
+] as const;
+---
+
 <section id="sobre" class="section about-section" aria-labelledby="about-title">
 	<div class="container about-layout">
-		<div>
-			<h2 id="about-title">Nossa história</h2>
-			<p>Desde 2016, quando a energia solar ainda era uma novidade no Brasil, a KingSun já estava em campo. Fomos pioneiros em democratizar o acesso à energia limpa e, hoje, unimos essa bagagem à infraestrutura para mobilidade elétrica. Não somos aventureiros de mercado: entregamos engenharia séria, preço justo e suporte de verdade para quem quer investir no futuro sem correr riscos.</p>
+		<div class="about__intro">
+			<div>
+				<h2 id="about-title">Quem somos</h2>
+				<p>Movidos pelo sol. Comprometidos com as pessoas.</p>
+			</div>
+			<p>Nascemos com o propósito de tornar a energia solar acessível para mais brasileiros, combinando tecnologia, excelência e atendimento próximo.</p>
 		</div>
 		<div class="values">
-			<article>
-				<img src="/images/visao.png" alt="Visão" />
-				<h3>Visão</h3>
-				<p>Liderar a transição energética do país, tornando o ecossistema de energia solar e carros elétricos a norma de consumo, e não a exceção.</p>
-			</article>
-			<article>
-				<img src="/images/missao.png" alt="Missão" />
-				<h3>Missão</h3>
-				<p>Derrubar a burocracia e  reduzir os custos para que qualquer pessoa ou empresa possa gerar sua própria energia e rodar com mobilidade limpa</p>
-			</article>
-			<article>
-				<img src="/images/valores.png" alt="Valores" />
-				<h3>Valores</h3>
-				<p>Transparência radical nos contratos (sem letras miúdas); Engenharia segura de ponta a ponta; Tecnologia que se paga no bolso do cliente.</p>
-			</article>
+			{pillars.map((pillar) => (
+				<article>
+					<div class="values__icon" aria-hidden="true">
+						<img src={pillar.icon} alt="" loading="lazy" />
+					</div>
+					<h3>{pillar.title}</h3>
+					<p>{pillar.text}</p>
+				</article>
+			))}
 		</div>
 	</div>
 </section>

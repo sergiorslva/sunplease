@@ -1,12 +1,26 @@
 ---
 import { company } from '../data/company';
-import { navigation } from '../data/content';
 
 interface Props {
 	logoSrc?: string;
 }
 
-const { logoSrc = '/images/kingsun-logo-white-horizontal.png' } = Astro.props;
+const { logoSrc = '/images/kingsun-logo-black-horizontal.png' } = Astro.props;
 ---
 
-<footer class="site-footer"><div class="container footer__top"><a class="brand" href="#inicio"><img src={logoSrc} alt={company.name} /></a><div><p>{company.email}</p><p>{company.phone}</p><p>{company.address}</p></div><div class="footer__links">{navigation.slice(0, 3).map((item) => <a href={item.href}>{item.label}</a>)}<a href={company.socialLinks.instagram} aria-label={`Instagram da ${company.name}`}>Instagram</a></div></div><div class="container footer__bottom"><span>© {new Date().getFullYear()} {company.name}. Todos os direitos reservados.</span><a href="#inicio">Voltar ao topo ↑</a></div></footer>
+<footer class="site-footer">
+	<div class="container footer__top">
+		<a class="brand" href="#inicio" aria-label={`${company.name} - inicio`}>
+			<img src={logoSrc} alt={company.name} />
+		</a>
+		<div class="footer__contact">
+			<p>{company.phone}</p>
+			<p>(11) 3456-7890</p>
+			<p>{company.email}</p>
+		</div>
+		<div class="footer__address">
+			<p>Rua Exemplo, 123</p>
+			<p>{company.address}</p>
+		</div>
+	</div>
+</footer>

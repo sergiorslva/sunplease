@@ -1,18 +1,33 @@
----
-import { whatsappUrl } from "../data/company";
----
-
 <section id="contato" class="contact-cta" aria-labelledby="contact-title">
-    <div class="container contact-cta__inner">
-        <div>
-            <p class="eyebrow">VAMOS CONVERSAR?</p><h2 id="contact-title">
-                Sua próxima economia começa com um oi.
-            </h2>
-        </div><a
-            class="button button--light"
-            href={whatsappUrl()}
-            target="_blank"
-            rel="noreferrer"
-            >Simular minha Economia <span aria-hidden="true">&#8599;</span></a>
-    </div>
+	<div class="container contact-cta__inner">
+		<div class="contact-cta__copy">
+			<h2 id="contact-title">
+				<span>Simule sua</span>
+				<span>economia solar</span>
+				<span>em dois passos</span>
+			</h2>
+			<p>Preencha seus dados e descubra quanto você pode economizar com a energia solar.</p>
+		</div>
+		<div class="contact-form-placeholder" aria-label="Espaco reservado para formulario de simulacao">
+			<div class="contact-form-placeholder__steps" aria-hidden="true">
+				<span class="is-active">1</span>
+				<strong>Seus dados</strong>
+				<i></i>
+				<span>2</span>
+				<strong>Resultado</strong>
+			</div>
+			<div class="contact-form-placeholder__fields" aria-hidden="true">
+				<div><small>Seu nome*</small><span>Ex.: Joao Silva</span></div>
+				<div><small>Seu celular*</small><span>(11) 91234-5678</span></div>
+				<div><small>Seu e-mail*</small><span>seu@email.com</span></div>
+			</div>
+			<div class="contact-form-placeholder__button" aria-hidden="true">Calcular agora <span>→</span></div>
+			<p aria-hidden="true">Seus dados estao seguros. Nao compartilhamos suas informacoes.</p>
+		</div>
+		<p class="contact-cta__note">
+			<span>O sol</span>
+			<span>trabalhando</span>
+			<span>por você.</span>
+		</p>
+	</div>
 </section>
