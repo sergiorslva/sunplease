@@ -524,19 +524,24 @@ body { background: $white; color: $ink; }
 .solutions-section {
 	position: relative;
 	overflow: hidden;
-	padding: 3.2rem 0 2rem;
-	background:
-		linear-gradient(90deg, rgba($white, .98) 0%, rgba($white, .96) 57%, rgba($white, .22) 74%, rgba($white, 0) 100%),
-		url('/images/kingsun-layout/solucoes-paineis-residenciais.jpg') right top / auto 100% no-repeat,
-		$white;
+	padding: 0 0 2.8rem;
+	background: $white;
 	color: $ink;
 }
 
 .solutions__inner {
+	position: relative;
+	width: 100%;
 	display: grid;
-	grid-template-columns: minmax(0, 1.1fr) minmax(220px, .72fr);
-	gap: 2rem;
-	align-items: start;
+	grid-template-columns: minmax(0, .95fr) minmax(360px, 1.05fr);
+	gap: 1.7rem 3rem;
+	align-items: end;
+	overflow: hidden;
+	padding-inline: max(1rem, calc((100% - #{$container}) / 2));
+	padding-bottom: .2rem;
+	background:
+		linear-gradient(90deg, rgba($white, 1) 0%, rgba($white, .98) 54%, rgba($white, .72) 67%, rgba($white, 0) 82%),
+		url('/images/kingsun-layout/solucoes-paineis-residenciais.png') right top / auto 96% no-repeat;
 }
 
 .solutions__copy h2 {
@@ -560,11 +565,15 @@ body { background: $white; color: $ink; }
 }
 
 .solutions__aside {
+	position: relative;
+	z-index: 1;
 	align-self: center;
-	max-width: 260px;
-	margin-left: auto;
+	justify-self: start;
+	max-width: 220px;
+	margin-left: 1rem;
+	padding-bottom: 2rem;
 	color: $ink;
-	font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+	font-size: clamp(.98rem, 1.2vw, 1.18rem);
 	font-weight: 500;
 }
 
@@ -578,11 +587,12 @@ body { background: $white; color: $ink; }
 
 .solutions__cards {
 	grid-column: 1 / -1;
+	position: relative;
+	z-index: 1;
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 1.05rem;
-	max-width: 920px;
-	margin-top: .85rem;
+	margin-top: .45rem;
 }
 
 .solution-card {
@@ -590,7 +600,7 @@ body { background: $white; color: $ink; }
 	padding: 1.1rem 1.05rem;
 	border: 1px solid rgba($ink, .08);
 	border-radius: 8px;
-	background: rgba($white, .86);
+	background: rgba($white, 1);
 	box-shadow: 0 16px 38px rgba($forest, .08);
 }
 
@@ -785,16 +795,15 @@ body { background: $white; color: $ink; }
 }
 
 @media (max-width: $bp-desktop) {
-	.solutions-section {
-		background:
-			linear-gradient(180deg, rgba($white, .98) 0%, rgba($white, .96) 62%, rgba($white, .76) 100%),
-			url('/images/kingsun-layout/solucoes-paineis-residenciais.jpg') right bottom / 72% auto no-repeat,
-			$white;
-	}
-
 	.solutions__inner,
 	.advantages__inner,
 	.future-banner__inner { grid-template-columns: 1fr; }
+
+	.solutions__inner {
+		background:
+			linear-gradient(180deg, rgba($white, 1) 0%, rgba($white, .98) 52%, rgba($white, .78) 100%),
+			url('/images/kingsun-layout/solucoes-paineis-residenciais.png') right top / auto 96% no-repeat;
+	}
 
 	.solutions__aside {
 		margin-left: 0;
@@ -807,18 +816,29 @@ body { background: $white; color: $ink; }
 }
 
 @media (max-width: $bp-tablet) {
-	.solutions-section {
-		background:
-			linear-gradient(180deg, rgba($white, .99), rgba($white, .92)),
-			url('/images/kingsun-layout/solucoes-paineis-residenciais.jpg') center bottom / 120% auto no-repeat,
-			$white;
-		padding-bottom: 6rem;
+	.solutions-section { padding-bottom: 3rem; }
+
+	.future-banner__seals { grid-template-columns: 1fr; }
+
+	.solutions__aside {
+		max-width: 100%;
+		padding-bottom: 0;
 	}
 
-	.solutions__cards,
-	.future-banner__seals { grid-template-columns: 1fr; }
+	.solutions__inner {
+		padding-bottom: clamp(13rem, 48vw, 19rem);
+		background:
+			linear-gradient(180deg, rgba($white, 1) 0%, rgba($white, .98) 58%, rgba($white, .72) 100%),
+			url('/images/kingsun-layout/solucoes-paineis-residenciais.png') right top / auto 92% no-repeat;
+	}
+
+	.solutions__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
 	.solution-card { min-height: 0; }
 	.advantages__photo img { min-height: 280px; }
 	.advantages__photo figcaption { inset: auto 1.25rem 1.25rem auto; }
+}
+
+@media (max-width: 520px) {
+	.solutions__cards { grid-template-columns: 1fr; }
 }
