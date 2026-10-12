@@ -10,17 +10,44 @@ const { logoSrc = '/images/kingsun-logo-black-horizontal.png' } = Astro.props;
 
 <footer class="site-footer">
 	<div class="container footer__top">
-		<a class="brand" href="#inicio" aria-label={`${company.name} - inicio`}>
-			<img src={logoSrc} alt={company.name} />
-		</a>
+		<div class="footer__brand">
+			<a class="brand" href="#inicio" aria-label={`${company.name} - inicio`}>
+				<img src={logoSrc} alt={company.name} />
+			</a>
+			<p>Energia solar para um Brasil mais forte.</p>
+		</div>
 		<div class="footer__contact">
-			<p>{company.phone}</p>
-			<p>(11) 3456-7890</p>
-			<p>{company.email}</p>
+			<p>
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.77.59 2.61a2 2 0 0 1-.45 2.11L8 9.7a16 16 0 0 0 6.3 6.3l1.26-1.25a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.61.59A2 2 0 0 1 22 16.92Z"></path></svg>
+				<span>{company.phone}</span>
+			</p>
+			<p>
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.77.59 2.61a2 2 0 0 1-.45 2.11L8 9.7a16 16 0 0 0 6.3 6.3l1.26-1.25a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.61.59A2 2 0 0 1 22 16.92Z"></path></svg>
+				<span>(11) 3456-7890</span>
+			</p>
+			<p>
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="m22 6-10 7L2 6"></path></svg>
+				<span>{company.email}</span>
+			</p>
+			<div class="footer__social" aria-label="Redes sociais">
+				<a href={company.socialLinks.instagram} aria-label="Instagram">◎</a>
+				<a href={company.socialLinks.linkedin} aria-label="LinkedIn">in</a>
+				<a href="#" aria-label="YouTube">▶</a>
+			</div>
 		</div>
 		<div class="footer__address">
-			<p>Rua Exemplo, 123</p>
-			<p>{company.address}</p>
+			<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-5.1 7-12a7 7 0 1 0-14 0c0 6.9 7 12 7 12Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+			<div>
+				<p>Rua Exemplo, 123</p>
+				<p>{company.address}</p>
+			</div>
 		</div>
+	</div>
+	<div class="container footer__bottom">
+		<nav aria-label="Links legais">
+			<a href="#">Politica de Privacidade</a>
+			<a href="#">Termos de Uso</a>
+		</nav>
+		<span>© 2024 KINGSUN. Todos os direitos reservados.</span>
 	</div>
 </footer>
