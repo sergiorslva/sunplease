@@ -8,21 +8,33 @@ import { steps } from "../data/content";
 	aria-labelledby="process-title"
 >
 	<div class="container">
-		<h2 id="process-title">Como funciona</h2>
-		<ol class="steps">
-			{
-				steps.map((step) => (
-					<li>
-						<div>
-							<div class="steps__icon">
-								<img src={step.icon} alt="" loading="lazy" />
+		<div class="process-heading">
+			<div>
+				<h2 id="process-title">Nosso processo</h2>
+				<p>Do planejamento ao seu futuro mais livre.</p>
+			</div>
+		</div>
+		<div class="process-flow">
+			<ol class="steps">
+				{
+					steps.map((step) => (
+						<li>
+							<div>
+								<div class="steps__icon">
+									<img src={step.icon} alt="" loading="lazy" />
+								</div>
+								<h3>{step.title}</h3>
+								<p>{step.text}</p>
 							</div>
-							<h3>{step.title}</h3>
-							<p>{step.text}</p>
-						</div>
-					</li>
-				))
-			}
-		</ol>
+						</li>
+					))
+				}
+			</ol>
+			<p class="process-note">
+				<span>Energia</span>
+				<span>move o seu</span>
+				<span>futuro</span>
+			</p>
+		</div>
 	</div>
 </section>

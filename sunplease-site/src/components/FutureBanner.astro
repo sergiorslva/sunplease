@@ -1,14 +1,26 @@
 ---
 const seals = [
-	'Residencias mais eficientes',
-	'Familias mais tranquilas',
-	'Um Brasil mais sustentavel',
+	{
+		text: 'Residencias mais eficientes',
+		image: '/images/kingsun-layout/future-banner-home.png',
+		alt: '',
+	},
+	{
+		text: 'Famílias mais tranquilas',
+		image: '/images/kingsun-layout/future-banner-people.png',
+		alt: '',
+	},
+	{
+		text: 'Um Brasil mais sustentável',
+		image: '/images/kingsun-layout/futurre-banner-leaf.png',
+		alt: '',
+	},
 ] as const;
 ---
 
 <section class="future-banner" aria-labelledby="future-title">
 	<div class="container future-banner__inner">
-		<div>
+		<div class="future-banner__copy">
 			<h2 id="future-title">
 				<span>Mais que energia.</span>
 				<span>Tranquilidade</span>
@@ -17,7 +29,19 @@ const seals = [
 			<p>Solucoes completas em energia solar residencial, com tecnologia de ponta e um time especialista ao seu lado em todas as etapas.</p>
 		</div>
 		<ul class="future-banner__seals" aria-label="Beneficios para o futuro">
-			{seals.map((seal) => <li>{seal}</li>)}
+			{seals.map((seal) => (
+				<li>
+					<img src={seal.image} alt={seal.alt} loading="lazy" />
+					<span>{seal.text}</span>
+				</li>
+			))}
 		</ul>
 	</div>
+	<a class="button future-banner__cta" href="#simulador">
+		Simular minha economia
+		<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+			<path d="M12 5v14"></path>
+			<path d="m6 13 6 6 6-6"></path>
+		</svg>
+	</a>
 </section>
