@@ -221,6 +221,14 @@ body { background: $white; color: $ink; }
 	border-bottom: 0;
 	box-shadow: none;
 	backdrop-filter: none;
+	transition: background-color $ease, border-color $ease, box-shadow $ease, backdrop-filter $ease;
+}
+
+.site-header.is-scrolled {
+	background: rgba($navy-deep, .94);
+	border-bottom: 1px solid rgba($white, .12);
+	box-shadow: 0 14px 32px rgba($navy-deep, .28);
+	backdrop-filter: blur(14px);
 }
 
 .header__inner {
